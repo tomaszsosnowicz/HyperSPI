@@ -4,22 +4,23 @@ set(CMAKE_SYSTEM_NAME Generic)
 # Some boards, such as the first Adafruit revisions, may have trouble booting properly
 # due to bad componets used in the design.
 # Turn this setting to ON if your rp2040 is not detected after firmware upload and reset
-set(BOOT_WORKAROUND ON)
+set(BOOT_WORKAROUND OFF)
 
 # Default output data pin for the non-SPI LED strips (only for sk6812/ws2812b)
-set(OUTPUT_DATA_PIN 14)
+set(OUTPUT_DATA_PIN 27)
 
 # Use multi-segment, starting index of second led strip or OFF to disable
+# set(SECOND_SEGMENT_INDEX 150)
 set(SECOND_SEGMENT_INDEX OFF)
 
 # If multi-segment is used and it's reversed, set this option to ON to enable reversing
-set(SECOND_SEGMENT_REVERSED OFF)
+set(SECOND_SEGMENT_REVERSED ON)
 
 # HyperSPI communication interface with Raspberry Pi
-set(OUTPUT_SPI_DATA_PIN 4)
-set(OUTPUT_SPI_CLOCK_PIN 2)
-set(OUTPUT_SPI_CHIP_SELECT 5)
-set(OUTPUT_SPI_INTERFACE spi0)
+set(OUTPUT_SPI_DATA_PIN 12)
+set(OUTPUT_SPI_CLOCK_PIN 14)
+set(OUTPUT_SPI_CHIP_SELECT 13)
+set(OUTPUT_SPI_INTERFACE spi1)
 
 # User configuration section ends here
 # Usually you don't need to change anything below this section
